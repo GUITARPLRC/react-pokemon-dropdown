@@ -1,5 +1,4 @@
 // PokeDrop.d.ts
-import { FC, CSSProperties } from "react"
 
 interface Pokemon {
   id: number
@@ -14,19 +13,17 @@ interface DropProps {
   placeholder?: string
   showId?: boolean
   style?: {
-    container?: CSSProperties
-    input?: CSSProperties
-    searchInput?: CSSProperties
-    icon?: CSSProperties
-    dropdown?: CSSProperties
-    option?: CSSProperties
-    optionText?: CSSProperties
-    noOption?: CSSProperties
-    noOptionText?: CSSProperties
+    container?: React.CSSProperties
+    input?: React.CSSProperties
+    searchInput?: React.CSSProperties
+    icon?: React.CSSProperties
+    dropdown?: React.CSSProperties
+    option?: React.CSSProperties
+    optionText?: React.CSSProperties
+    noOption?: React.CSSProperties
+    noOptionText?: React.CSSProperties
   }
   value?: string
 }
 
-declare const PokeDrop: FC<DropProps>
-
-export default PokeDrop
+declare const PokeDrop: React.FC<DropProps>
