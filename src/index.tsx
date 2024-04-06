@@ -1,6 +1,32 @@
 import React, { useState, FC, CSSProperties } from "react"
 import pokemonData from "./data"
 
+export interface Pokemon {
+  id: number
+  name: string
+}
+
+export interface DropProps {
+  clearIcon?: () => JSX.Element
+  dropdownIcon?: () => JSX.Element
+  noResultsText?: string
+  onChange?: (value: string) => void
+  placeholder?: string
+  showId?: boolean
+  style?: {
+    container?: React.CSSProperties
+    input?: React.CSSProperties
+    searchInput?: React.CSSProperties
+    icon?: React.CSSProperties
+    dropdown?: React.CSSProperties
+    option?: React.CSSProperties
+    optionText?: React.CSSProperties
+    noOption?: React.CSSProperties
+    noOptionText?: React.CSSProperties
+  }
+  value?: string
+}
+
 // Separate the search logic into a custom hook
 function useSearch(items: Pokemon[], searchTerm: string) {
   return searchTerm
