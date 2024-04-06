@@ -1,12 +1,12 @@
 import React, { useState, FC, CSSProperties } from "react"
 import pokemonData from "./data"
 
-export interface Pokemon {
+interface Pokemon {
   id: number
   name: string
 }
 
-export interface DropProps {
+export interface PokeDropProps {
   clearIcon?: () => JSX.Element
   dropdownIcon?: () => JSX.Element
   noResultsText?: string
@@ -37,13 +37,13 @@ function useSearch(items: Pokemon[], searchTerm: string) {
 }
 
 // Abstract the onChange call into a separate function
-function callOnChange(onChange: DropProps["onChange"], value: string) {
+function callOnChange(onChange: PokeDropProps["onChange"], value: string) {
   if (typeof onChange === "function") {
     onChange(value)
   }
 }
 
-const PokeDrop: FC<DropProps> = ({
+const PokeDrop: FC<PokeDropProps> = ({
   clearIcon,
   dropdownIcon,
   noResultsText,
