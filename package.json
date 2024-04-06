@@ -1,6 +1,6 @@
 {
   "name": "react-pokemon-dropdown",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Chuck Reynolds",
   "license": "MIT",
   "description": "A dropdown search component built with React and Typescript",
